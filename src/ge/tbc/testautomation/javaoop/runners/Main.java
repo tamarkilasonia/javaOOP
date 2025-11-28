@@ -47,6 +47,7 @@ public class Main {
         System.out.println("\n=== Testing LimitException with multiple instances ===");
         try {
             // Create multiple circles until we hit the limit of 5
+            System.out.println("Hotfix branch change");
             for (int i = 1; i <= 10; i++) {
                 Circle circle = new Circle(i * 1.0); // Valid radius, but will hit limit after 5th instance
                 System.out.println("Successfully created circle " + i + " with radius: " + circle.getRadius());
