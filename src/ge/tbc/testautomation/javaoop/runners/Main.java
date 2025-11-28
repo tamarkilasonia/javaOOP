@@ -77,44 +77,45 @@ public class Main {
         // Print text length
         System.out.println("\nText length: " + text.length());
 
-        // Replace spaces with dashes
-        String textWithDashes = text.replace(" ", "-");
-        System.out.println("Text with dashes: " + textWithDashes);
+// Replace spaces with dashes
+String textWithDashes = text.replace(" ", "-");
+System.out.println("Text with dashes: " + textWithDashes);
 
-        //  Phone number validation
-        System.out.println("\n=== Phone Number Validation ===");
+//  Phone number validation
+System.out.println("\n=== Phone Number Validation ===");
 
-        // Array of phone numbers to test (mix of valid and invalid)
-        String[] phoneNumbers = {
-                "599-14-15-16",  // Valid - starts with 599, has 6 digits after
-                "555-12-34-56",  // Valid - starts with 555, has 6 digits after
-                "595-99-88-77",  // Valid - starts with 595, has 6 digits after
-                "592-00-11-22",  // Valid - starts with 592, has 6 digits after
-                "599-1A-23-45",  // Invalid - contains letter 'A'
-                "555-123-456",   // Invalid - wrong format (only 7 digits after prefix)
-                "599-14-15",     // Invalid - too short (only 5 digits after prefix)
-                "555-12-34-56-78", // Invalid - too long (8 digits after prefix)
-                "123-45-67-89",  // Invalid - wrong prefix (123)
-                "599-14-15-1A"   // Invalid - contains letter 'A' at the end
-        };
+// Array of phone numbers to test (mix of valid and invalid)
+String[] phoneNumbers = {
+        "599-14-15-16",  // Valid - starts with 599, has 6 digits after
+        "555-12-34-56",  // Valid - starts with 555, has 6 digits after
+        "595-99-88-77",  // Valid - starts with 595, has 6 digits after
+        "592-00-11-22",  // Valid - starts with 592, has 6 digits after
+        "599-1A-23-45",  // Invalid - contains letter 'A'
+        "555-123-456",   // Invalid - wrong format (only 7 digits after prefix)
+        "599-14-15",     // Invalid - too short (only 5 digits after prefix)
+        "555-12-34-56-78", // Invalid - too long (8 digits after prefix)
+        "123-45-67-89",  // Invalid - wrong prefix (123)
+        "599-14-15-1A"   // Invalid - contains letter 'A' at the end
+};
 
-        // Test each phone number
-        for (String phoneNumber : phoneNumbers) {
-            boolean isValid = phoneNumberValidation(phoneNumber);
-            System.out.println("Phone number '" + phoneNumber + "' is valid: " + isValid);
-        }
-    }
-    private static boolean phoneNumberValidation(String phoneNumber) {
-        // Remove all dashes from the phone number
-        String cleanedNumber = phoneNumber.replace("-", "");
-        // Regex pattern explanation:
-        // ^ - start of string
-        // (555|595|592|599) - must start with one of these prefixes
-        // [0-9]{6} - followed by exactly 6 digits (0-9)
-        // $ - end of string
-        String regex = "^(555|595|592|599)[0-9]{6}$";
+// Test each phone number
+for (String phoneNumber : phoneNumbers) {
+    boolean isValid = phoneNumberValidation(phoneNumber);
+    System.out.println("Phone number '" + phoneNumber + "' is valid: " + isValid);
+}
 
-        // Check if cleaned number matches the regex pattern
-        return cleanedNumber.matches(regex);
+// Keep the rectangle comparison from main branch
+HelperFunction.compareRectangles(r1, r2);
+}
+
+private static boolean phoneNumberValidation(String phoneNumber) {
+    // Remove all dashes from the phone number
+    String cleanedNumber = phoneNumber.replace("-", "");
+
+    // Pattern explained:
+    String regex = "^(555|595|592|599)[0-9]{6}$";
+
+    return cleanedNumber.matches(regex);
 }
 }
+
