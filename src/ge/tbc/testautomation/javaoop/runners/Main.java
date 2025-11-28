@@ -38,7 +38,7 @@ public class Main {
         System.out.println("Triangle area: " + t1.getArea());
         System.out.println("Triangle perimeter: " + t1.getPerimeter());
 
-        //Bonus
+    
         HelperFunction.compareRectangles(r1,r2);
     }
 }
