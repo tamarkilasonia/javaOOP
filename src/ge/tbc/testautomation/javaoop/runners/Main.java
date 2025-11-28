@@ -29,5 +29,25 @@ public class Main {
 
         t.customSize(0.5);
         System.out.println("Triangle area after customSize(0.5): " + t.getArea());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        System.out.println("Main branch change");
+
     }
 }
