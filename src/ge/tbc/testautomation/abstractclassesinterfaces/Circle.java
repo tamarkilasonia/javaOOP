@@ -22,7 +22,7 @@ public class Circle extends Figure implements IResizable, IValidFigure {
     public double getLength() {
         return 2 * Math.PI * radius;
     }
-
+;
     @Override
     public void printPackageName() {
         System.out.println(this.getClass().getPackageName());
