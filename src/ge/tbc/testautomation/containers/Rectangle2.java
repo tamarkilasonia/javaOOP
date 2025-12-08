@@ -13,6 +13,7 @@ public Rectangle2(int width, int heigh){
     public int getArea(){
     return width*heigh;
 
+        
     }
 
     @Override
