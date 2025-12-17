@@ -7,6 +7,7 @@ public class LimitException extends RuntimeException {
     public LimitException(String messange){
         // Constructor that takes an error message
         super(messange); // Pass message to parent RuntimeException class
+        
     }
 }
 
