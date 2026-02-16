@@ -142,20 +142,9 @@ for (String phoneNumber : phoneNumbers) {
     System.out.println("Phone number '" + phoneNumber + "' is valid: " + isValid);
 }
 
-// Keep the rectangle comparison from main branch
-HelperFunction.compareRectangles(r1, r2);
-}
 
-private static boolean phoneNumberValidation(String phoneNumber) {
-    // Remove all dashes from the phone number
-    String cleanedNumber = phoneNumber.replace("-", "");
 
-    // Pattern explained:
-    String regex = "^(555|595|592|599)[0-9]{6}$";
 
-    return cleanedNumber.matches(regex);
-}
-}
 
     }
 }
